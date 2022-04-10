@@ -52,7 +52,7 @@ while(nomeAtleta != ''):
     print("Melhor salto: ",melhorSalto, "m")
     print("Pior salto: ",piorSalto, "m")
     media /= 3
-    print("media {:.2f} m".format(media))
+    print("Média {:.2f} m".format(media))
     print()
     # print("Resultado final")
     # # print(nomeAtleta, ":{:.2f}".format(media))
