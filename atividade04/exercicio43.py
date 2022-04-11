@@ -1,3 +1,4 @@
+# Exercício 43
 
 codigo100 = 1.20
 codigo101 = 1.30
@@ -51,6 +52,7 @@ while(pedido == "N" or pedido == "n"):
     
     print("Deseja fechar o pedido?")
     pedido = input("S / N: ")
+    
 print("Subtotal:")
 print("Especificação   Código  Preço")
 print("Cachorro Quente 100     R$ 1,20 x ",quantidade100," = {:.2f}".format(subtotal100))
