@@ -1,54 +1,48 @@
-# Em uma competição de ginástica, cada atleta recebe votos de sete jurados. A melhor e a pior nota são eliminadas. A sua nota fica sendo a média dos votos restantes. Você deve fazer um programa que receba o nome do ginasta e as notas dos sete jurados alcançadas pelo atleta em sua apresentação e depois informe a sua média, conforme a descrição acima informada (retirar o melhor e o pior salto e depois calcular a média com as notas restantes). As notas não são informados ordenadas. Um exemplo de saída do programa deve ser conforme o exemplo abaixo:
-
-# Atleta: Aparecido Parente
-# Nota: 9.9
-# Nota: 7.5
-# Nota: 9.5
-# Nota: 8.5
-# Nota: 9.0
-# Nota: 8.5
-# Nota: 9.7
-
-# Resultado final:
-# Atleta: Aparecido Parente
-# Melhor nota: 9.9
-# Pior nota: 7.5
-# Média: 9,04
+# Exercício 46
 
 nomeAtleta = ''
 nomeAtleta = input("Entre como nome do atleta: ")
+resultadoFinal = []
+while(nomeAtleta != ''):
+    contador = 0
+    melhorSalto = -1.0
+    piorSalto = 30.0
+    media = 0.0
+    saltos = []
+    melhores = []
 
-contador = 0
-melhorNota = -1.0
-piorNota = 11.0
-media = 0.0
-notas = []
+    while(contador <5):
+        print("Entre com o salto número:",contador+1)
+        salto = float(input())
+        saltos.append(salto)
+        contador += 1
+        if(salto < piorSalto):
+            piorSalto = salto
+        if(salto > melhorSalto):
+            melhorSalto = salto
+    print("***********************")
+    print("Atleta: ",nomeAtleta)
+    contagemSaltos = 1
 
-while(contador <7):
-    print("Entre com a nota: ",contador+1)
-    nota = float(input())
-    notas.append(nota)
-    contador += 1
-    if(nota < piorNota):
-        piorNota = nota
-    if(nota > melhorNota):
-        melhorNota = nota
-print("***********************")
-print("Atleta: ",nomeAtleta)
-contagemNotas = 1
+    for salto in saltos:
+        print("Salto número:", contagemSaltos, ",", salto, "m")
+        contagemSaltos += 1
+        if(salto != melhorSalto and salto != piorSalto):
+            media += salto
 
-for nota in notas:
-    print("Nota:", contagemNotas, ",", nota)
-    contagemNotas += 1
-    if(nota != melhorNota and nota != piorNota):
-        media += nota
+    print("***********************")
+    print("Melhor salto: ",melhorSalto, "m")
+    print("Pior salto: ",piorSalto, "m")
+    media /= 3
+    print("Média {:.2f} m".format(media))
+    print()
+    # print("Resultado final")
+    # # print(nomeAtleta, ":{:.2f}".format(media))
+    resultadoFinal.append(str(nomeAtleta + ":{:.2f} m".format(media)))
+    nomeAtleta = input("Entre como nome do atleta: ")
 
 print("***********************")
 print("Resultado final")
-print("Atleta: ",nomeAtleta)
-print("Melhor nota: ",melhorNota)
-print("Pior nota: ",piorNota)
-media /= 5
-print("Média {:.2f}".format(media))
-print()
-
+# resultado = str(nomeAtleta + ":{:.2f}".format(media))
+for resultado in resultadoFinal:
+    print(resultado)

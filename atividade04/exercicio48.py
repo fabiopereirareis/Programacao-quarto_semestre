@@ -1,44 +1,19 @@
-# Faça um programa que mostre os n termos da Série a seguir:
+# Exercício 48
 
-#       S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m. 
+numeroEntrada = int(input("Entre com um número inteiro positivo: "))
 
-#     Imprima no final a soma da série.
+conversao = str(numeroEntrada)
+stringVetor = []
+stringSaida = ''
 
-entradaNumero = int(input("Entre com o número: "))
-numerosImpares = 1
-contador = 1
-resultado = 0
+for letra in conversao:
+    stringVetor.append(letra)
 
-while(contador <= entradaNumero):
-    resultado += contador/numerosImpares
-    numerosImpares += 2
-    contador += 1
-print(resultado)
+stringVetor.reverse()
 
-# solução 01
-# entradaNUmero = int(input("Entre com o número: "))
-# contadorImpar = 1
-# contador = 1
-# impares = 0
-# resultado = 0
-# while(contador < entradaNUmero):
-#     if(contadorImpar % 2 != 0):
-#         impares = contadorImpar
-#     else:
-#         contadorImpar += 1
-#         impares = contadorImpar
-#     resultado += contador/impares
-#     contadorImpar += 1
-#     contador += 1
+for letra in stringVetor:
+    stringSaida += letra
 
-# solução 02
-# entradaNumero = int(input("Entre com o número: "))
-# contadorImpar = 0
-# contador = 1
-# resultado = 0
-# while(contador < entradaNumero):
-#     if(contadorImpar % 2 == 0):
-#         contadorImpar += 1
-#     resultado += contador/contadorImpar
-#     contadorImpar += 1
-#     contador += 1
+print(stringSaida)
+
+

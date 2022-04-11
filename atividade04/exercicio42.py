@@ -1,6 +1,4 @@
-# Faça um programa que leia uma quantidade indeterminada de números positivos e conte quantos deles estão nos seguintes intervalos:
-#  [0-25], [26-50], [51-75] e [76-100]. 
-# A entrada de dados deverá terminar quando for lido um número negativo.
+# Exercício 42
 
 numeroEntrada = 1
 conjuntoA = 0 # 0-25
@@ -9,6 +7,7 @@ conjuntoC = 0 # 51-75
 conjuntoD = 0 # 76-100
 
 numeroEntrada = int(input("Entre com um número: "))
+
 while(numeroEntrada >= 0):
     if numeroEntrada >=0 and numeroEntrada <= 25:
         conjuntoA +=1
