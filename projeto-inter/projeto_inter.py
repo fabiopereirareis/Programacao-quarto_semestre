@@ -1,10 +1,4 @@
-# print('hello world')
-
-# enquanto o resultado da divisão for maior que zero
-# divida o valor de entrada pela base e guarde o resto da divisão num vetor
-# entrada = 400
-# base = 2
-
+#Projeto interdisciplinar ADS 1/4B - 2022
 
 def conversaoBases(entrada:int, base:int):
     """método que recebe um valor inteiro e um valor da base para conversão"""
@@ -27,8 +21,7 @@ def conversaoBases(entrada:int, base:int):
             textoCompleto += str(numero)
 
     return textoCompleto
-    # print(textoCompleto)
-# print(resultado)
+
 def formatacaoHexadecimal(vetor: int):
     """método que formata o valor de entrada com as letras usadas na base Hexadecimal"""
     textoCompleto = ''
@@ -49,9 +42,6 @@ def formatacaoHexadecimal(vetor: int):
         else:
             textoCompleto += str(elemento)
     return textoCompleto
-
-# resultado = conversaoBases(2748,16)
-# print(resultado)
 
 def menuConversorBases():
     """Menu inicial com opções do conversor de bases"""
@@ -84,16 +74,6 @@ def menuConversorBases():
 
             print("*************")
             print("Resultado: ",resultado)
-    
 
 menuConversorBases()
 
-# sobra = 2 / 8
-
-# print(sobra)
-
-
-# def msgTela(msg):
-#     print(msg)
-
-# msgTela('Ola mundo')
