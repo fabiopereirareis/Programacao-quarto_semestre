@@ -50,6 +50,14 @@ def menuConversorBases():
     print("Seja bem vindo ao conversor de bases!")
     print("*************")
 
+    grupo = (""" INTEGRANTES: 
+            Fábio Pereira Reis - RGM: 24456632
+            João Victor Rodrigues Moraes Conquista - RGM:29445116
+            Kellen Rodrigues Cocati - RGM: 29907888
+            Alexandre Rodrigues de Santana - RGM: 129372941
+            Nicoli Rosa - RGM: 28969219
+            Mayki Pereira da Silva - RGM 29401305 """)
+
     opcao = int(0)
     
     while(opcao != 4):
@@ -74,6 +82,7 @@ def menuConversorBases():
 
             print("*************")
             print("Resultado: ",resultado)
+    print(grupo)
 
 menuConversorBases()
 
